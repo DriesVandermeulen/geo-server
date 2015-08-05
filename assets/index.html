@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+
+        <title>App</title>
+        <meta name="description" content="App">
+        <meta name="author" content="Dries">
+
+        <link rel="stylesheet" href="./css/app.css">
+        <link rel="stylesheet" href="./css/vendor.css">
+    </head>
+
+    <body>
+        <div id="container" class="container">
+            <ul id="experiment-list"></ul>
+        </div>
+        <script type="text/template" id="experiment-details-template">
+            <div class="experiment-details">
+                <div class="row">
+                    <div class="eight columns">
+                        <h2 class="experiment-name"><%- name %></h2>
+                        <h6 class="experiment-created-at"><%- created_at_formatted() %></h6>
+                    </div>
+                    <div class="four columns">
+                        <a class="button button-primary" href="#">Export csv</a>
+                        <a class="button" href="/#/experiments">⬅ back</a>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="six columns">
+                        <h5>Recorded locations</h5>
+                        <table class="u-full-width">
+                            <thead>
+                                <tr>
+                                    <td><strong>Time</strong></td>
+                                    <td><strong>Latitude</strong></td>
+                                    <td><strong>Longitude</strong></td>
+                                </tr>
+                            </thead>
+                            <tbody id="location-list"></tbody>
+                        </table>
+                    </div>
+                    <div class="six columns">
+                        <h5>Map</h5>
+                    </div>
+                <div>
+        
+            </div>
+        
+        </script>
+        <script type="text/template" id="experiment-item-template">
+        
+            <div class="experiment-item">
+                <span class="created-at"><%- created_at_formatted() %></span>
+                <a href="<%- routerUrl() %>">
+                    <span class="name"><%- name %></span>
+                </a>
+            </div>
+        
+        </script>
+        <script type="text/template" id="experiment-overview-template">
+        
+            <div>
+                <h2>Experiments</h2>
+                <hr>
+                <ul id="experiment-list"></ul>
+            </div>
+        
+        </script>
+        <script type="text/template" id="location-item-template">
+        
+            <td><%- created_at_formatted_time() %></td>
+            <td><%- latitude %></td>
+            <td><%- longitude %></td>
+        
+        </script>
+
+        <script src="./js/thirdparty.js"></script>
+        <script src="./js/app.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js"></script>
+    </body>
+</html>

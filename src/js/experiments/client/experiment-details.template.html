@@ -1,0 +1,35 @@
+<script type="text/template" id="experiment-details-template">
+    <div class="experiment-details">
+        <div class="row">
+            <div class="eight columns">
+                <h2 class="experiment-name"><%- name %></h2>
+                <h6 class="experiment-created-at"><%- created_at_formatted() %></h6>
+            </div>
+            <div class="four columns">
+                <a class="button button-primary" href="#">Export csv</a>
+                <a class="button" href="/#/experiments">⬅ back</a>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="six columns">
+                <h5>Recorded locations</h5>
+                <table class="u-full-width">
+                    <thead>
+                        <tr>
+                            <td><strong>Time</strong></td>
+                            <td><strong>Latitude</strong></td>
+                            <td><strong>Longitude</strong></td>
+                        </tr>
+                    </thead>
+                    <tbody id="location-list"></tbody>
+                </table>
+            </div>
+            <div class="six columns">
+                <h5>Map</h5>
+            </div>
+        <div>
+
+    </div>
+
+</script>

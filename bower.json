@@ -1,0 +1,11 @@
+{
+  "name": "geo-api",
+  "version": "1.0.0",
+  "main": "server.js",
+  "dependencies": {
+    "underscore": "1.*",
+    "backbone": "1.*",
+    "jquery": "2.*",
+    "skeleton": "2.*"
+  }
+}

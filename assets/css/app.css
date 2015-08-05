@@ -1,0 +1,11 @@
+#container {
+  padding: 2rem; }
+
+.experiment-item .created-at {
+  margin-right: 20px; }
+
+.experiment-details .experiment-name {
+  display: inline-block;
+  margin-right: 2rem; }
+.experiment-details .experiment-created-at {
+  display: inline-block; }

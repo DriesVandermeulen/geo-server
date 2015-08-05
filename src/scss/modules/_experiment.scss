@@ -1,0 +1,15 @@
+.experiment-item {
+    .created-at {
+        margin-right:20px;
+    }
+}
+
+.experiment-details {
+    .experiment-name {
+        display: inline-block;
+        margin-right: $margin*2;
+    }
+    .experiment-created-at {
+        display: inline-block;
+    }
+}
