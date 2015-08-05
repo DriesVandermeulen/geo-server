@@ -8,5 +8,6 @@ module.exports = function(router){
     router.delete('/locations/:id', controller.delete);
 
     router.get('/experiments/:experimentId/locations', controller.findAllByExperiment);
+    router.get('/experiments/:experimentId/locations/csv', controller.generateCsvByExperiment);
 };
 

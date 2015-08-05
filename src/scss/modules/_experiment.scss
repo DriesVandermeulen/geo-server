@@ -13,3 +13,14 @@
         display: inline-block;
     }
 }
+
+.remove {
+    color: #B5333B;
+    margin-left: 20px;
+    font-size: 20px;
+    text-decoration: none;
+
+    &:hover, &:active {
+        color: darken(#B5333B, 30%);
+    }
+}

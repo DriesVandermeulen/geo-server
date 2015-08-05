@@ -6,7 +6,7 @@
                 <h6 class="experiment-created-at"><%- created_at_formatted() %></h6>
             </div>
             <div class="four columns">
-                <a class="button button-primary" href="#">Export csv</a>
+                <a class="button button-primary" href="/api/experiments/<%- _id %>/locations/csv" target="_blank">Export csv</a>
                 <a class="button" href="/#/experiments">⬅ back</a>
             </div>
         </div>
@@ -20,6 +20,7 @@
                             <td><strong>Time</strong></td>
                             <td><strong>Latitude</strong></td>
                             <td><strong>Longitude</strong></td>
+                            <td><strong>Remove</strong></td>
                         </tr>
                     </thead>
                     <tbody id="location-list"></tbody>
@@ -27,6 +28,7 @@
             </div>
             <div class="six columns">
                 <h5>Map</h5>
+                <div id="google-map"></div>
             </div>
         <div>
 

@@ -1,5 +1,6 @@
 var ObjectId = require('mongoose').Types.ObjectId;
 var Location = require('./locations.modal');
+var Experiment = require('../experiments/experiments.modal');
 
 exports.findAll = function(req, res) {
 
@@ -70,5 +71,28 @@ exports.delete = function(req, res) {
 
         res.send();
     });
+};
+
+exports.generateCsvByExperiment = function(req, res) {
+    var experimentId = req.params.experimentId;
+
+    Location.find({experiment: new ObjectId(experimentId)}, function(err, locations) {
+        if (err) throw err;
+
+        Experiment.findById(experimentId, function(err, experiment) {
+            if (err) throw err;
+
+            var csvFileName = experiment.name + '.csv';
+            var csvDate = '';
+            locations.forEach(function(location){
+                csvDate += location.created_at.getTime() + ',' + location.latitude + ',' + location.longitude + '\n'
+            });
+
+            res.attachment(csvFileName);
+            res.end(csvDate, 'UTF-8')
+        });
+    });
+
+
 };
 
